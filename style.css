@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+input {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 6px 8px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #dadce0;
+}
+
+.checkbox-effect{
+    border-radius: 50%;
+    padding: 11px 12px 9px 12px; 
+}
+
+.checkbox-effect:hover{
+    background-color: #ececec;
+    transition: all ease-out .3s;
+}
+
+.check-box-hover-color:hover{
+    background-color: #c7cbff;
+}
+
+
+.container {
+    min-width: 668px;
+    margin: auto;
+    /* padding: 0 40px; */
+}
+
+.container-2 {
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    border-radius: 8px;
+    margin: auto;
+    padding: 48px 0px 36px;
+}
+
+form{
+    min-width: 300px;
+}
+
+.signup-wrapper-2{
+    min-width: 665px;
+}
+
+.signup-main-wrapper,
+.sign-in-email,
+.sign-in-pass{
+    padding-top: 10vh;
+
+}
+
+.signup-main-wrapper .container{
+        padding: 48px 40px 36px;
+}
+
+.signup-main-wrapper .signup-wrapper {
+    justify-content: space-between;
+    gap: 48px;
+    /* overflow: hidden; */
+}
+
+.flex {
+    display: flex;
+    transition: all ease .5s;
+}
+
+.signup-left-part {
+    width: 354px;
+}
+
+.google-logo-image{
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.google-logo-image img {
+    width: 75px;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease 4s; */
+}
+
+.main-title {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.main-title>p {
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    color: #202124;
+    word-break: break-word;
+    position: absolute;
+}
+
+.signup-form {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    padding-top: 24px;
+}
+
+.signup-right-part {
+    max-width: 244px;
+}
+
+.name-take {
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.mail-wrapper-div {
+    padding-top: 24px;
+}
+
+.mail-rule>p,
+.password-rule>p {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4286;
+    color: #5f6368;
+    padding-left: 10px;
+}
+
+.use-current-address {
+    padding: 14px 0;
+}
+
+.use-current-address>p,
+.sign-in-tag>p {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    color: #1a73e8;
+}
+
+.password-take {
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 24px;
+}
+
+.show-pass-div {
+    align-items: center;
+}
+
+.show-pass-div input {
+    width: 18px;
+    height: 18px;
+}
+
+.show-password-title>p {
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 14px;
+    color: #202124;
+    line-height: 1.4286;
+}
+
+.submit-wrapper {
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom:20px;
+    align-items: center;
+}
+
+.submit-btn {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 24px;
+    background-color: #1a73e8;
+}
+
+.signup-right-part .signup-quotes{
+    color: #202124;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.4286;
+}
+
+.transaction-relative{
+    position: relative;
+    padding-top: 8px;
+    flex: 1;
+}
+
+.form-transaction{
+    position: absolute;
+    left: 2px;
+    top: 0;
+    background-color: white;
+}
+
+.transaction-relative>span{
+   pointer-events: none;
+   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;;
+   color: #5f6368;
+   font-size: 16px;
+   font-weight: 400;
+   padding: 0 3px;
+}
+
+.transaction-relative>input:focus{
+    /* border-color: #1a73e8; */
+    border: 2px solid #1a73e8;
+}
+
+.transaction-relative>input:not(:focus)+span{
+    transform: translate(12%, 86%) scale(100%);
+    transition-duration: .15s;
+}
+
+.transaction-relative>input:focus+span{
+    transform: translate(-12%, -8%) scale(70%);
+    transition-duration: .15s;
+    color: #1a73e8;
+    background-color: #fff;
+}
+
+.input-filled{
+    transform: translate(-12%, -8%) scale(70%) !important;
+}
+
+/* validation classes */
+.border-red{
+    border-color: #ff0000;
+}
+
+.visible{
+    display: block ! important;
+}
+
+.hidden{
+    display: none;
+}
+
+.empty-field-alart>p{
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 12px;
+    color: #d93025;
+    line-height: 1.4286;
+    padding-top: 5px;
+}
+
+.empty-field-alart>p:before {
+    content: "";
+    background: url(./image/alert-icon.png) no-repeat;
+    background-size: 18px;
+    background-position: left;
+    padding: 12px;
+}
+
+
+.sign-in-email{
+    padding: 15vh;
+}
+
+.welcome{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    /* background-color: red; */
+    background: url(./image/google-logo-2.svg) no-repeat center;
+    background-size:contain;
+}
+
+.welcome img{
+    /* height: 100vh; */
+}
+
+/* Sign-in email page */
+.sign-in-email input,
+.sign-in-pass input{
+color: #202124;
+font-size: 16px;
+height: 28px;
+padding: 20px 15px;
+}
+
+.subtitle{
+    padding-top: 7px;
+}
+
+.sign-in-email .transaction-relative>input:not(:focus)+span,
+.sign-in-pass .transaction-relative>input:not(:focus)+span{
+    transform: translate(12%, 95%) scale(100%);
+    transition-duration: .15s;
+    background-color: transparent;
+}
+
+.forget{
+    padding-top: 10px;
+    padding-bottom: 45px;
+}
+
+.forget a,
+.learn-more a{
+font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+color: #1a73e8;
+display: inline-block;
+font-weight: 500;
+letter-spacing: .25px;
+font-size: 14px;
+}
+
+.not-your-computer p{
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    color: #5f6368;
+    font-size: 14px;
+    line-height: 1.4286;
+}
+
+.submit-wrapper>div{
+    padding: 8px;
+    border-radius: 10px;
+    transition: all ease-in .15s;
+}
+
+.submit-wrapper>div:hover{
+    background-color: #eaf3ff;
+}
+
+.sign-in-email .submit-wrapper,
+.sign-in-pass .submit-wrapper{
+    padding-top: 50px;
+}
+
+.center-trasition{
+    transform: translate(center);
+    transition: all ease 1s;
+}
+.center-trasition-2{
+    transform: translate(20%);
+    transition: all ease 1s;
+}
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.main-frame{
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    max-width: 748px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 40px;
+}
+.frame{
+    position: relative;
+}
+
+.wrapper-all{
+    gap: 200px;
+}
+
+
+.scale{
+    transform: scalex(.6);
+    transition: all ease .5s;
+}
+
+/* .slide{
+    transform: translate(-170%);
+} */
+
+
+.scale-static{
+    transform: translate(-176.5%) scalex(1.6);
+}
+
+.scale-static-2{
+    transform: translate(-321.5%) scalex(1.6);
+}
+
+.scale-static-3{
+    transform: translate(50%) scalex(1.6);
+}
+
+.scale-static-4{
+    transform: translate(-50%) scalex(1.6);
+}
+
+.scale-static-5{
+    transform: translate(32%) scalex(1.6);
+}
+
+
+.signup .container{
+    justify-content: space-between;    
+    /* padding: 0 40px; */
+}
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 901px) {
+   .signup-right-part{
+    display: none;
+   }
+
+   .signup-main-wrapper .signup-wrapper {
+        flex-direction: column;
+   }
+
+
+.signup-left-part {
+    width: 100%;
+    transition: all ease .5s;
+}
+
+}
+
+@media only screen and (max-width: 601px) {
+    .name-take,
+    .password-take {
+        flex-direction: column;
+    }
+
+    .signup-main-wrapper {
+        padding: 15vh 5vh;
+    }
+
+    .sign-in-email{
+        padding: 15vh 0;
+    }
+
+    .container-2{
+        max-width: 100%;
+        transition: all ease .2s;
+    }
+}

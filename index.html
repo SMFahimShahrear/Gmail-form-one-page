@@ -10,94 +10,160 @@
 </head>
 
 <body>
-  <section class="main-frame">
-    <div class="navigation">
+  <div class="padding">
+    <section class="main-frame">
+      <div class="navigation">
 
-    </div>
-    <div class="google-logo-image">
-      <img src="./image/google-logo.png" alt="" />
-    </div>
-    <div class="main-title">
-      <p>Sign in</p>
-    </div>
-    <div class="subtitle">
-      <p>Use your Google Account</p>
-    </div>
-    <div class="frame">
-      <div class="wrapper-all flex">
-        <section class="signup">
-          <div class="container flex">
-            <div class="signup-left-part">
-              <form action="" class="signup-form" method="post">
-                <div class="name-take flex">
-                  <div class="transaction-relative">
-                    <input type="text" class="f-name" autofocus onfocusout="checkfuntion(this)" />
-                    <span class="form-transaction">First name</span>
+      </div>
+      <div class="google-logo-image">
+        <img src="./image/google-logo.png" alt="" />
+      </div>
+      <div class="main-title">
+        <p>Create your Google Account</p>
+      </div>
+      <div class="subtitle">
+        <p></p>
+      </div>
+      <div class="frame">
+        <div class="wrapper-all flex">
+          <section class="signup">
+            <div class="container flex">
+              <div class="signup-left-part">
+                <form action="" class="signup-form" method="post">
+                  <div class="name-take flex">
+                    <div class="transaction-relative">
+                      <input type="text" class="f-name" autofocus onfocusout="checkfuntion(this)" />
+                      <span class="form-transaction">First name</span>
+                    </div>
+                    <div class="transaction-relative">
+                      <input type="text" class="l-name" onfocusout="checkfuntion(this)" />
+                      <span class="form-transaction">Last name</span>
+                    </div>
                   </div>
-                  <div class="transaction-relative">
-                    <input type="text" class="l-name" onfocusout="checkfuntion(this)" />
-                    <span class="form-transaction">Last name</span>
+                  <div class="empty-field-alart empty-field-alart-1 hidden">
+                    <p>Enter first name and surname</p>
                   </div>
+                  <div class="empty-field-alart empty-field-alart-2 hidden">
+                    <p>Enter first name</p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-3 hidden">
+                    <p>Enter last name</p>
+                  </div>
+                  <div class="mail-wrapper-div">
+                    <div class="transaction-relative">
+                      <input type="text" class="mail" onfocusout="checkfuntion(this)" />
+                      <span class="form-transaction">Username</span>
+                    </div>
+                  </div>
+                  <div class="mail-rule">
+                    <p>You can use letters, numbers & periods</p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-4 hidden">
+                    <p>Choose a Gmail address</p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-5 hidden">
+                    <p>That username is taken. Try another.</p>
+                  </div>
+                  <button class="use-current-address">
+                    <p>Use my current email address instead</p>
+                  </button>
+                  <div class="password-take flex">
+                    <div class="transaction-relative">
+                      <input type="password" class="password" onfocusout="checkfuntion(this)" />
+                      <span class="form-transaction">Password</span>
+                    </div>
+
+                    <div class="transaction-relative">
+                      <input type="password" class="confirm-password" onfocusout="checkfuntion(this)" />
+                      <span class="form-transaction">Confirm</span>
+                    </div>
+                  </div>
+                  <div class="password-rule">
+                    <p>
+                      Use 8 or more characters with a mix of letters, numbers &
+                      symbols
+                    </p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-6 hidden">
+                    <p>Enter a password</p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-7 hidden">
+                    <p>Use 8 characters or more for your password</p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-8 hidden">
+                    <p>Confirm your password</p>
+                  </div>
+                  <div class="empty-field-alart empty-field-alart-9 hidden">
+                    <p>Those passwords didn’t match. Try again.</p>
+                  </div>
+                  <div class="show-pass-div flex">
+                    <div class="checkbox-effect">
+                      <input type="checkbox" name="" class="checkbox-show-pass" onclick="password_visibility(this)" />
+                    </div>
+                    <div class="show-password-title">
+                      <p>Show password</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="signup-right-part">
+                <img src="./image/account.svg" alt="" />
+                <div class="signup-quotes">
+                  <p>One account. All of Google working for you.</p>
                 </div>
-                <div class="empty-field-alart empty-field-alart-1 hidden">
-                  <p>Enter first name and surname</p>
-                </div>
-                <div class="empty-field-alart empty-field-alart-2 hidden">
-                  <p>Enter first name</p>
-                </div>
-                <div class="empty-field-alart empty-field-alart-3 hidden">
-                  <p>Enter last name</p>
-                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="container-2">
+              <form action="sign-in-password.html" class="signup-form" method="post">
                 <div class="mail-wrapper-div">
                   <div class="transaction-relative">
-                    <input type="text" class="mail" onfocusout="checkfuntion(this)" />
+                    <input type="text" class="mail-check" onfocusout="checkfuntion(this)" />
                     <span class="form-transaction">Username</span>
                   </div>
                 </div>
-                <div class="mail-rule">
-                  <p>You can use letters, numbers & periods</p>
+                <div class="empty-field-alart empty-field-alart-20 hidden">
+                  <p>Couldn't find your Google Account</p>
                 </div>
-                <div class="empty-field-alart empty-field-alart-4 hidden">
-                  <p>Choose a Gmail address</p>
+                <div class="empty-field-alart empty-field-alart-21 hidden">
+                  <p>Enter an email or phone number</p>
                 </div>
-                <div class="empty-field-alart empty-field-alart-5 hidden">
-                  <p>That username is taken. Try another.</p>
+                <div class="forget">
+                  <a href="#">Forgot email?</a>
                 </div>
-                <button class="use-current-address">
-                  <p>Use my current email address instead</p>
-                </button>
-                <div class="password-take flex">
-                  <div class="transaction-relative">
-                    <input type="password" class="password" onfocusout="checkfuntion(this)" />
-                    <span class="form-transaction">Password</span>
+                <div class="not-your-computer">
+                  <p>Not your computer? Use a Private Window to sign in.</p>
+                </div>
+                <a href="">
+                  <div class="learn-more">
+                    <a href="#">Learn more</a>
                   </div>
+                </a>
 
+              </form>
+            </div>
+          </section>
+
+          <section>
+            <div class="container-2">
+              <form action="welcome-page.html" class="signup-form" method="post">
+                <div class="mail-wrapper-div">
                   <div class="transaction-relative">
-                    <input type="password" class="confirm-password" onfocusout="checkfuntion(this)" />
-                    <span class="form-transaction">Confirm</span>
+                    <input type="password" class="pass-check" onfocusout="checkfuntion(this)" />
+                    <span class="form-transaction">Enter your password</span>
                   </div>
                 </div>
-                <div class="password-rule">
-                  <p>
-                    Use 8 or more characters with a mix of letters, numbers &
-                    symbols
-                  </p>
+                <div class="empty-field-alart empty-field-alart-30 hidden">
+                  <p>Wrong password. Try again or click Forgot password to reset it.</p>
                 </div>
-                <div class="empty-field-alart empty-field-alart-6 hidden">
+                <div class="empty-field-alart empty-field-alart-31 hidden">
                   <p>Enter a password</p>
-                </div>
-                <div class="empty-field-alart empty-field-alart-7 hidden">
-                  <p>Use 8 characters or more for your password</p>
-                </div>
-                <div class="empty-field-alart empty-field-alart-8 hidden">
-                  <p>Confirm your password</p>
-                </div>
-                <div class="empty-field-alart empty-field-alart-9 hidden">
-                  <p>Those passwords didn’t match. Try again.</p>
                 </div>
                 <div class="show-pass-div flex">
                   <div class="checkbox-effect">
-                    <input type="checkbox" name="" class="checkbox-show-pass" onclick="password_visibility(this)" />
+                    <input type="checkbox" name="" class="checkbox-show-pass" onclick="password_visibility2(this)" />
                   </div>
                   <div class="show-password-title">
                     <p>Show password</p>
@@ -105,100 +171,24 @@
                 </div>
               </form>
             </div>
-            <div class="signup-right-part">
-              <img src="./image/account.svg" alt="" />
-              <div class="signup-quotes">
-                <p>One account. All of Google working for you.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <div class="container-2">
-            <form action="sign-in-password.html" class="signup-form" method="post">
-              <div class="mail-wrapper-div">
-                <div class="transaction-relative">
-                  <input type="text" class="mail-check" onfocusout="checkfuntion(this)" />
-                  <span class="form-transaction">Username</span>
-                </div>
-              </div>
-              <div class="empty-field-alart empty-field-alart-20 hidden">
-                <p>Couldn't find your Google Account</p>
-              </div>
-              <div class="empty-field-alart empty-field-alart-21 hidden">
-                <p>Enter an email or phone number</p>
-              </div>
-              <div class="forget">
-                <a href="#">Forgot email?</a>
-              </div>
-              <div class="not-your-computer">
-                <p>Not your computer? Use a Private Window to sign in.</p>
-              </div>
-              <a href="">
-                <div class="learn-more">
-                  <a href="#">Learn more</a>
-                </div>
-              </a>
-
-              <!-- <div class="submit-wrapper flex">
-              <div><a href="./index.html" class="sign-in-tag"><p>Create account</p></a>
-              </div>
-              <button class="submit-btn" type="submit"onclick="return emailAuth()"> Next </button>
-            </div> -->
-            </form>
-          </div>
-        </section>
-
-        <section>
-          <div class="container-2">
-            <form action="welcome-page.html" class="signup-form" method="post">
-              <div class="mail-wrapper-div">
-                <div class="transaction-relative">
-                  <input type="password" class="pass-check" onfocusout="checkfuntion(this)" />
-                  <span class="form-transaction">Enter your password</span>
-                </div>
-              </div>
-              <div class="empty-field-alart empty-field-alart-30 hidden">
-                <p>Wrong password. Try again or click Forgot password to reset it.</p>
-              </div>
-              <div class="empty-field-alart empty-field-alart-31 hidden">
-                <p>Enter a password</p>
-              </div>
-              <div class="show-pass-div flex">
-                <div class="checkbox-effect">
-                  <input type="checkbox" name="" class="checkbox-show-pass" onclick="password_visibility2(this)" />
-                </div>
-                <div class="show-password-title">
-                  <p>Show password</p>
-                </div>
-              </div>
-
-              <!-- <div class="submit-wrapper flex">
-              <div>
-                <a href="./signup-page.html" class="sign-in-tag">
-                <p>Forgot password?</p>
-              </a>
-              </div>
-              
-              <button class="submit-btn" type="submit" onclick="return passAuth()">Next</button>
-            </div> -->
-            </form>
-          </div>
-        </section>
-
+        </div>
       </div>
-    </div>
       <div class="submit-wrapper flex">
         <div class="sign-in-tag" onclick="slider1()">
-            <p >Sign in instead</p>
+          <p>Sign in instead</p>
         </div>
         <button class="submit-btn" type="submit" onclick="return validation()">Submit</button>
       </div>
-  </section>
-  <section class="welcome hidden">
-    <div><P>welcome to Google</P></div>
- </section>
+    </section>
+    <section class="welcome hidden">
+      <div>
+        <P>welcome to Google</P>
+      </div>
+    </section>
+
+  </div>
   <script src="./script.js"></script>
 </body>
 

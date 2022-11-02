@@ -39,7 +39,9 @@ input {
     background-color: #c7cbff;
 }
 
-
+.padding{
+    padding-top: 10vh;
+}
 .container {
     min-width: 668px;
     margin: auto;
@@ -90,6 +92,7 @@ form{
 }
 
 .google-logo-image{
+    padding-top: 20px;
     padding-bottom: 30px;
     position: relative;
 }
@@ -104,7 +107,8 @@ form{
 }
 
 .main-title {
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     position: relative;
 }
 
@@ -313,6 +317,7 @@ padding: 20px 15px;
 
 .subtitle{
     padding-top: 7px;
+    /* position: relative; */
 }
 
 .sign-in-email .transaction-relative>input:not(:focus)+span,
@@ -376,7 +381,7 @@ font-size: 14px;
     border: 1px solid #dadce0;
     max-width: 748px;
     margin: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 0 40px;
 }
 .frame{
@@ -387,6 +392,11 @@ font-size: 14px;
     gap: 200px;
 }
 
+.center-stick{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scalex(1.6);
+}
 
 .scale{
     transform: scalex(.6);
@@ -407,7 +417,7 @@ font-size: 14px;
 }
 
 .scale-static-3{
-    transform: translate(50%) scalex(1.6);
+    transform: translate(390%) scalex(1.6);
 }
 
 .scale-static-4{
@@ -415,7 +425,7 @@ font-size: 14px;
 }
 
 .scale-static-5{
-    transform: translate(32%) scalex(1.6);
+    transform: translate(58%) scalex(1.6);
 }
 
 

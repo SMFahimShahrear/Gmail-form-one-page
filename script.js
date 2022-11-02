@@ -7,6 +7,7 @@ let confirm_password_field = document.querySelector(".confirm-password");
 let error = 0;
 let data = "";
 let buttonCnt = 0;
+let mail_field2 = '';
 
 function checkfuntion(e) {
     if (e.value != "") {
@@ -16,9 +17,6 @@ function checkfuntion(e) {
         e.nextElementSibling.classList.remove('input-filled');
     }
 }
-
-
-// form_transition = document.querySelectorAll(".form-transaction");
 
 function password_visibility(e) {
     if (e.checked == true) {
@@ -121,7 +119,6 @@ function validation() {
                 if (password_field.value.localeCompare(confirm_password_field.value) != 0) {               //passowrd match
                     error = 1;
                     document.querySelector(".empty-field-alart-9").classList.remove("hidden");
-                    // document.querySelector(".empty-field-alart-8").classList.add("hidden");
                     document.querySelector(".password-rule").classList.add("hidden");
                 }
             }
@@ -139,9 +136,12 @@ function validation() {
     else if (buttonCnt == 1) {
 
         document.querySelector(".empty-field-alart-20").classList.add("hidden");
-        let mail_field2 = document.querySelector('.mail-check').value;
+        mail_field2 = document.querySelector('.mail-check').value;
         let check = localStorage.getItem(mail_field2);
-
+        let position_start = check.search("fname:");
+        let position_end = check.search("lname:");
+        let username = check.slice(position_start + 6, position_end);
+        document.querySelector(".subtitle p").innerText = username.toUpperCase();
 
         if (mail_field2 == '') {
             document.querySelector(".empty-field-alart-21").classList.remove("hidden");
@@ -149,28 +149,34 @@ function validation() {
         }
 
         if (check) {
-            sessionStorage.setItem("mailaddress", mail_field2);
             document.querySelector(".wrapper-all").classList.add("scale-static-2");
+            document.querySelector(".main-title p").innerText = 'Welcome';
+            document.querySelector(".main-title p").classList.remove("center-trasition-2");
+            document.querySelector(".main-title p").classList.remove("scale-static-3");
+            document.querySelector(".main-title p").classList.add("center-stick");
+            // document.querySelector(".subtitle p").classList.remove("center-trasition-2");
+            document.querySelector(".subtitle p").classList.remove("scale-static-5");
+            document.querySelector(".subtitle p").classList.add("center-stick");
+
         } else {
             document.querySelector(".empty-field-alart-20").classList.remove("hidden");
             document.querySelector(".empty-field-alart-21").classList.add("hidden");
             return false;
-            // document.querySelector(".password-rule").classList.add("hidden");
         }
     }
-
+    
     else if (buttonCnt == 2) {
-
         let password = document.querySelector(".pass-check");
         document.querySelector(".empty-field-alart-30").classList.add("hidden");
         document.querySelector(".empty-field-alart-31").classList.add("hidden");
-        let find = sessionStorage.getItem("mailaddress");
+        let find = mail_field2;
 
         if (password.value == '') {
             document.querySelector(".empty-field-alart-31").classList.remove("hidden");
             return false;
         }
         if (find) {
+            console.log("sera");
             let str = localStorage.getItem(find);
             let position_start = str.search("pass:");
             let position_end = str.search("fname:");
@@ -200,6 +206,7 @@ function validation() {
 
 
 function slider1(){
+    // document.querySelector(".google-logo-image img").classList.add("center-stick");
     document.querySelector(".google-logo-image img").classList.add("center-trasition");
     document.querySelector(".main-title p").classList.add("center-trasition-2");
     document.querySelector(".main-frame").classList.add("scale");
@@ -210,17 +217,19 @@ function slider1(){
     document.querySelector(".submit-wrapper div").classList.add("scale-static-5");
     document.querySelector(".submit-wrapper button").classList.add("scale-static-4");
     buttonCnt = 1;
+    document.querySelector(".main-title p").innerText = 'Sign in';
+    document.querySelector(".subtitle p").innerText = 'Use your Google Account';
     console.log("greayt");
     console.log(buttonCnt);
 }
 function nameappear() {
-    let find = sessionStorage.getItem("mailaddress");
+
     if (find) {
-        let str = localStorage.getItem(find);
+        let str = localStorage.getItem(mail_field2);
         let position_start = str.search("fname:");
         let position_end = str.search("lname:");
         let username = str.slice(position_start + 6, position_end);
-        document.querySelector(".user-name").innerText = username.toUpperCase();
+        document.querySelector(".subtitle p").innerText = username.toUpperCase();
     }
 }
 

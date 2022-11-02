@@ -7,6 +7,7 @@ let confirm_password_field = document.querySelector(".confirm-password");
 let error = 0;
 let data = "";
 let buttonCnt = 0;
+let sliderCnt = 0;
 let mail_field2 = '';
 
 function checkfuntion(e) {
@@ -39,9 +40,7 @@ function password_visibility2(e) {
 
 // validation
 function validation() {
-    console.log("ok boss");
-    console.log(buttonCnt);
-    
+
     if (buttonCnt == 0) {
         // document.querySelectorAll(".empty-field-alart").classList.add("hidden");
         document.querySelector(".empty-field-alart-1").classList.add("hidden");
@@ -176,14 +175,11 @@ function validation() {
             return false;
         }
         if (find) {
-            console.log("sera");
             let str = localStorage.getItem(find);
             let position_start = str.search("pass:");
             let position_end = str.search("fname:");
             let pass = str.slice(position_start + 5, position_end);
-            console.log(password.value);
             if (pass.localeCompare(password.value) == 0) {
-                console.log("ok");
                 document.querySelector(".main-frame").classList.add("hidden");
                 document.querySelector(".welcome").classList.remove("hidden");
                 return false;
@@ -198,7 +194,6 @@ function validation() {
             return false;
         }
     }
-    console.log("X:", buttonCnt);
     buttonCnt++;
     return false;
 
@@ -207,6 +202,7 @@ function validation() {
 
 function slider1(){
     // document.querySelector(".google-logo-image img").classList.add("center-stick");
+    if(sliderCnt == 0){
     document.querySelector(".google-logo-image img").classList.add("center-trasition");
     document.querySelector(".main-title p").classList.add("center-trasition-2");
     document.querySelector(".main-frame").classList.add("scale");
@@ -216,11 +212,27 @@ function slider1(){
     document.querySelector(".google-logo-image img").classList.add("scale-static-3");
     document.querySelector(".submit-wrapper div").classList.add("scale-static-5");
     document.querySelector(".submit-wrapper button").classList.add("scale-static-4");
-    buttonCnt = 1;
     document.querySelector(".main-title p").innerText = 'Sign in';
     document.querySelector(".subtitle p").innerText = 'Use your Google Account';
-    console.log("greayt");
-    console.log(buttonCnt);
+    buttonCnt = 1;
+    sliderCnt = 1;
+    }
+
+    else if(sliderCnt == 1){
+        document.querySelector(".google-logo-image img").classList.remove("center-trasition");
+        document.querySelector(".main-frame").classList.remove("scale");
+        document.querySelector(".wrapper-all").classList.remove("scale-static");
+        document.querySelector(".main-title p").innerText = 'Create your Google Account';
+        document.querySelector(".main-title p").classList.remove("scale-static-3");
+        document.querySelector(".main-title p").classList.remove("center-trasition-2");
+        document.querySelector(".subtitle p").classList.remove("scale-static-5");
+        document.querySelector(".google-logo-image img").classList.remove("scale-static-3");
+        document.querySelector(".submit-wrapper div").classList.remove("scale-static-5");
+        document.querySelector(".submit-wrapper button").classList.remove("scale-static-4");
+        document.querySelector(".subtitle p").innerText = ' ';
+        buttonCnt = 0;
+        sliderCnt = 0;
+    }
 }
 function nameappear() {
 

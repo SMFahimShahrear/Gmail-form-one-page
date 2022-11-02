@@ -100,6 +100,7 @@ form{
 .google-logo-image img {
     width: 75px;
     position: absolute;
+    transition: all ease 1s;
     /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -120,6 +121,7 @@ form{
     color: #202124;
     word-break: break-word;
     position: absolute;
+    transition: all ease 1s;
 }
 
 .signup-form {
@@ -320,6 +322,10 @@ padding: 20px 15px;
     /* position: relative; */
 }
 
+.subtitle p{
+    transition: all ease 1s;
+}
+
 .sign-in-email .transaction-relative>input:not(:focus)+span,
 .sign-in-pass .transaction-relative>input:not(:focus)+span{
     transform: translate(12%, 95%) scale(100%);
@@ -381,7 +387,7 @@ font-size: 14px;
     border: 1px solid #dadce0;
     max-width: 748px;
     margin: auto;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 0 40px;
 }
 .frame{
@@ -428,12 +434,20 @@ font-size: 14px;
     transform: translate(58%) scalex(1.6);
 }
 
+/* .scale-static-6{
+    transform: translate(58%) scalex(1.6);
+} */
+
 
 .signup .container{
     justify-content: space-between;    
     /* padding: 0 40px; */
 }
 
+
+.sign-in-tag{
+    transition: all ease-in .15s;
+}
 
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */

@@ -25,47 +25,35 @@ input {
     border: 1px solid #dadce0;
 }
 
-.checkbox-effect{
-    border-radius: 50%;
-    padding: 11px 12px 9px 12px; 
+.for-center{
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
-.checkbox-effect:hover{
+.checkbox-effect {
+    border-radius: 50%;
+    padding: 11px 12px 9px 12px;
+}
+
+.checkbox-effect:hover {
     background-color: #ececec;
     transition: all ease-out .3s;
 }
 
-.check-box-hover-color:hover{
+.check-box-hover-color:hover {
     background-color: #c7cbff;
-}
-
-
-.container {
-    max-width: 748px;
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    margin: auto;
-}
-
-.container-2 {
-    flex-direction: column;
-    align-items: center;
-    max-width: 448px;
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    margin: auto;
-    padding: 48px 40px 36px;
 }
 
 .signup-main-wrapper,
 .sign-in-email,
-.sign-in-pass{
+.sign-in-pass {
     padding-top: 10vh;
 
 }
 
-.signup-main-wrapper .container{
-        padding: 48px 40px 36px;
+.signup-main-wrapper .container {
+    padding: 48px 40px 36px;
 }
 
 .signup-main-wrapper .signup-wrapper {
@@ -87,6 +75,7 @@ input {
 
 .main-title {
     padding-top: 16px;
+    position: relative;
 }
 
 .main-title>p {
@@ -96,6 +85,7 @@ input {
     line-height: 1.3333;
     color: #202124;
     word-break: break-word;
+    transition: all ease .5s;
 }
 
 .signup-form {
@@ -111,6 +101,7 @@ input {
 .name-take {
     justify-content: space-between;
     gap: 8px;
+    padding-top: 24px;
 }
 
 .mail-wrapper-div {
@@ -183,73 +174,72 @@ input {
     background-color: #1a73e8;
 }
 
-.signup-right-part .signup-quotes{
+.signup-right-part .signup-quotes {
     color: #202124;
-    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     text-align: center;
     line-height: 1.4286;
 }
 
-.transaction-relative{
+.transaction-relative {
     position: relative;
     padding-top: 8px;
     flex: 1;
 }
 
-.form-transaction{
+.form-transaction {
     position: absolute;
     left: 2px;
     top: 0;
     background-color: white;
 }
 
-.transaction-relative>span{
-   pointer-events: none;
-   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;;
-   color: #5f6368;
-   font-size: 16px;
-   font-weight: 400;
-   padding: 0 3px;
+.transaction-relative>span {
+    pointer-events: none;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    color: #5f6368;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 3px;
 }
 
-.transaction-relative>input:focus{
-    /* border-color: #1a73e8; */
+.transaction-relative>input:focus {
     border: 2px solid #1a73e8;
 }
 
-.transaction-relative>input:not(:focus)+span{
+.transaction-relative>input:not(:focus)+span {
     transform: translate(12%, 86%) scale(100%);
     transition-duration: .15s;
 }
 
-.transaction-relative>input:focus+span{
+.transaction-relative>input:focus+span {
     transform: translate(-12%, -8%) scale(70%);
     transition-duration: .15s;
     color: #1a73e8;
     background-color: #fff;
 }
 
-.input-filled{
+.input-filled {
     transform: translate(-12%, -8%) scale(70%) !important;
 }
 
 /* validation classes */
-.border-red{
+.border-red {
     border-color: #ff0000;
 }
 
-.visible{
+.visible {
     display: block ! important;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.empty-field-alart>p{
-    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+.empty-field-alart>p {
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
     font-size: 12px;
     color: #d93025;
     line-height: 1.4286;
@@ -264,173 +254,190 @@ input {
     padding: 12px;
 }
 
-
-.sign-in-email{
+.sign-in-email {
     padding: 15vh;
 }
 
-.welcome{
+.welcome {
     width: 90%;
     height: 100vh;
     margin: auto;
-    /* background-color: red; */
     background: url(./image/google-logo-2.svg) no-repeat center;
-    background-size:contain;
-}
-
-.welcome img{
-    /* height: 100vh; */
+    background-size: contain;
 }
 
 /* Sign-in email page */
 .sign-in-email input,
-.sign-in-pass input{
-color: #202124;
-font-size: 16px;
-height: 28px;
-padding: 20px 15px;
+.sign-in-pass input {
+    color: #202124;
+    font-size: 16px;
+    height: 28px;
+    padding: 20px 15px;
 }
 
-.subtitle{
+.subtitle {
     padding-top: 7px;
+    position: relative;
 }
 
 .sign-in-email .transaction-relative>input:not(:focus)+span,
-.sign-in-pass .transaction-relative>input:not(:focus)+span{
+.sign-in-pass .transaction-relative>input:not(:focus)+span {
     transform: translate(12%, 95%) scale(100%);
     transition-duration: .15s;
     background-color: transparent;
 }
 
-.forget{
+.forget {
     padding-top: 10px;
     padding-bottom: 45px;
 }
 
 .forget a,
-.learn-more a{
-font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
-color: #1a73e8;
-display: inline-block;
-font-weight: 500;
-letter-spacing: .25px;
-font-size: 14px;
+.learn-more a {
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    font-size: 14px;
 }
 
-.not-your-computer p{
-    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+.not-your-computer p {
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
     color: #5f6368;
     font-size: 14px;
     line-height: 1.4286;
 }
 
-.submit-wrapper>div{
+.submit-wrapper>div {
     padding: 8px;
     border-radius: 10px;
     transition: all ease-in .15s;
 }
 
-.submit-wrapper>div:hover{
+.submit-wrapper>div:hover {
     background-color: #eaf3ff;
 }
 
 .sign-in-email .submit-wrapper,
-.sign-in-pass .submit-wrapper{
+.sign-in-pass .submit-wrapper {
     padding-top: 50px;
 }
 
-
-
-/* /X////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-.section-wrapper{
+.section-wrapper {
     gap: 200px;
     position: absolute;
     transition: all ease .5s;
 }
 
-.signup-wrapper{
+.signup-wrapper {
     min-width: 666px;
     justify-content: space-between;
 }
 
-.frame-box{
+.frame-box {
     padding: 48px 40px;
     max-width: 748px;
+    width: 748px;
     border: 1px solid #dadce0;
     border-radius: 8px;
     margin: auto;
-    margin-top: 20vh;
     transition: all ease .5s;
     overflow: hidden;
 }
 
-.scale-small{
-transform: scaleX(0.6);
-padding: 48px 66px;
+.scale-small {
+    transform: scaleX(0.6);
+    padding: 48px 66px;
 }
 
-.transition-left-first{
-    transform:translateX(-843px) scaleX(1.67);
+.transition-left-first {
+    transform: translateX(-843px) scaleX(1.67);
 }
 
-.transition-left-second{
-    transform:translateX(-1791.5px) scaleX(1.67);
+.transition-left-second {
+    transform: translateX(-1791.5px) scaleX(1.67);
 }
 
-.transition-google-logo{
-    transform:translateX(145px);
+.transition-google-logo {
+    transform: translateX(146.5px);
 }
 
 
-.google-logo-image img{
+.google-logo-image img {
     transition: all ease .5s;
 }
-.frame{
-    background-color: red;
+
+.frame {
     padding-bottom: 331px;
     position: relative;
 }
 
-.signin-form{
+.signin-form {
     min-width: 368px;
 }
 
-.button-wrapper-fix{
+.button-wrapper-fix {
     transform-origin: 0% 50%;
     transform: scaleX(1.74);
 }
 
-.signin-signup{
+.signin-signup {
     padding: 4px;
     border-radius: 4px;
 }
 
-.signin-signup:hover{
+.signin-signup:hover {
     cursor: pointer;
-    background-color:#eaebff;
+    background-color: #eaebff;
 }
 
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.create-successful {
+    background-color: #b4ffa1;
+    position: absolute;
+    left: 80px;
+}
 
+.horizontel-center {
+    position: absolute;
+    left: 26.5%;
+    transform: translateX(-26.5%);
+}
+
+.horizontel-center-subtitle {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-49%);
+}
+
+.min-height {
+    min-height: 45px;
+}
+
+.padding-top-zero {
+    padding-top: 0 !important;
+}
+
+
+/* Media queries */
 @media only screen and (max-width: 901px) {
-   .signup-right-part{
-    display: none;
-   }
+    .signup-right-part {
+        display: none;
+    }
 
-   .signup-main-wrapper .signup-wrapper {
+    .signup-main-wrapper .signup-wrapper {
         flex-direction: column;
-   }
+    }
 
-
-.signup-left-part {
-    width: 100%;
-    transition: all ease .5s;
-}
+    .signup-left-part {
+        width: 100%;
+        transition: all ease .5s;
+    }
 
 }
 
 @media only screen and (max-width: 601px) {
+
     .name-take,
     .password-take {
         flex-direction: column;
@@ -440,12 +447,8 @@ padding: 48px 66px;
         padding: 15vh 5vh;
     }
 
-    .sign-in-email{
+    .sign-in-email {
         padding: 15vh 0;
     }
 
-    .container-2{
-        max-width: 100%;
-        transition: all ease .2s;
-    }
 }
